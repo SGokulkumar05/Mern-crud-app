@@ -9,7 +9,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use('/',require('./router.js'));
-app.listen(5000,(err)=>{
+app.listen(process.env.PORT || 5000,(err)=>{
     if(!err){
         console.log("server is running at port 5000");
     }
